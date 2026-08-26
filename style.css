@@ -1,0 +1,368 @@
+:root {
+    --bg-dark: #0A0812;
+    --card-bg: #120F24;
+    --card-border: #231B42;
+    --purple-primary: #8C52FF;
+    --cyan-accent: #00F2FE;
+    --text-color: #FFFFFF;
+    --text-secondary: #B5B3C6;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+}
+
+header img {
+    height: 40px;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #7928CA, #FF0080);
+    color: #fff; 
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-secundario {
+    background: transparent;
+    border: 1px solid var(--purple-primary);
+    color: #fff;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.btn-primary:hover, .btn-secundario:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.btn-secundario:hover {
+    background-color: rgba(140, 82, 255, 0.1);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 750px;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #FFFFFF;
+    margin-bottom: 1.25rem;
+}
+
+.hero p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #C4C0DC;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.hero-banner {
+    width: 100%;
+    max-width: 600px;
+    margin: -1rem auto 0;
+    display: flex;
+    justify-content: center;
+} 
+
+.hero-bg {
+    width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+}
+
+.proposta-valor {
+    position: relative;
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.proposta-texto {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.proposta-texto strong {
+    color: var(--cyan-accent);
+}
+
+.icon-float {
+    position: absolute;
+    width: 48px;
+    height: auto;
+}
+
+.icon-top-right {
+    top: 0;
+    right: 10%;
+}
+
+.icon-bottom-left {
+    bottom: -10px;
+    left: 5%;
+}
+
+.icon-bottom-right {
+    bottom: -10px;
+    right: 5%;
+}
+
+.kit-mensal {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.kit-mensal h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.kit-mensal .subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.kit-mensal-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.kit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.kit-item > img {
+    max-height: 300px;
+    width: auto;
+    object-fit: contain;
+}
+
+.kit-item p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.bookmarks {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-end;
+}
+
+.bookmarks img {
+    max-height: 260px;
+    width: auto;
+    object-fit: contain;
+}
+
+.planos {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.planos h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.planos-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.card-plano {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.card-plano.popular {
+    border: 2px solid var(--purple-primary);
+    position: relative;
+    transform: scale(1.03);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--cyan-accent);
+    color: #0A0812;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 2px 10px;
+    border-radius: 12px;
+}
+
+.card-plano h3 {
+    font-size: 1.5rem;
+    color: var(--purple-primary);
+    margin-bottom: 0.5rem;
+}
+
+.card-plano .preco {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.card-plano .preco span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.card-plano .preco-anual {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-plano ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.card-plano li {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-plano li::before {
+    content: "✓";
+    color: var(--purple-primary);
+    font-weight: bold;
+}
+
+.card-plano button {
+    width: 100%;
+}
+
+footer {
+    background-image: url('assets/images/book-trace-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-brand .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-brand .social-links img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.footer-brand .social-links img:hover {
+    opacity: 1;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 4rem;
+}
+
+.footer-nav h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-nav a {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: var(--text-color);
+}
